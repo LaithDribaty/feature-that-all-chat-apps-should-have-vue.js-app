@@ -6,4 +6,5 @@ if you were typing a message , then you must reply another message , so you can 
 
 the template of the chat from : https://www.youtube.com/watch?v=Hrz3DzZDIt0
 
-just download the file , then extract it , then open index.html and enjoy using the feature
+you may visit https://chatfeature.000webhostapp.com/ 
+or just download the file , then extract it , then open index.html and enjoy using the feature
