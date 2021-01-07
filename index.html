@@ -16,8 +16,8 @@
                 <div class="chatlogs">
                     <div v-for="message in messages" class="chat" :class="{self:!message.speaker , friend: message.speaker}">
                         <div class="user-photo">
-                            <img v-if="message.speaker" src="img/friend.png" alt="failed"> 
-                            <img v-else src="img/me.png" alt="failed"> 
+                            <img v-if="message.speaker" src="friend.png" alt="failed"> 
+                            <img v-else src="me.png" alt="failed"> 
                         </div>
                         <div class="chat-message"> {{ message.val }} </div>
                     </div>
@@ -44,8 +44,8 @@
                     <div v-for="message in messages" class="chat" :class="{self:message.speaker , friend: !message.speaker}">
                         
                         <div class="user-photo"> 
-                            <img v-if="message.speaker" src="img/friend.png" alt="failed"> 
-                            <img v-else src="img/me.png" alt="failed"> 
+                            <img v-if="message.speaker" src="friend.png" alt="failed"> 
+                            <img v-else src="me.png" alt="failed"> 
                         </div>
                         <div class="chat-message"> {{ message.val }} </div>
                     </div>
