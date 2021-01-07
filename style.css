@@ -132,3 +132,10 @@ td {
   padding-left: 65px;
   padding-right: 65px;
 }
+
+.title{
+  font-size: 25px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
