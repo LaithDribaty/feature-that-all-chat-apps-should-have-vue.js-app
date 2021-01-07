@@ -13,6 +13,7 @@
     <tr>
         <td>
             <div class="chat-box" id="box1">
+                <div class="title"> Dina </div>
                 <div class="chatlogs">
                     <div v-for="message in messages" class="chat" :class="{self:!message.speaker , friend: message.speaker}">
                         <div class="user-photo">
@@ -40,6 +41,7 @@
         </td>
         <td>
             <div class="chat-box" id="box2">
+                <div class="title"> Laith </div>
                 <div class="chatlogs">
                     <div v-for="message in messages" class="chat" :class="{self:message.speaker , friend: !message.speaker}">
                         
