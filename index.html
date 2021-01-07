@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app"> 
+    <table class="table">
+    <tr>
+        <td>
+            <div class="chat-box" id="box1">
+                <div class="chatlogs">
+                    <div v-for="message in messages" class="chat" :class="{self:!message.speaker , friend: message.speaker}">
+                        <div class="user-photo">
+                            <img v-if="message.speaker" src="img/friend.png" alt="failed"> 
+                            <img v-else src="img/me.png" alt="failed"> 
+                        </div>
+                        <div class="chat-message"> {{ message.val }} </div>
+                    </div>
+                </div>
+
+                <div v-for="i in numOfKeyboard1" class="chat-form">
+                    <textarea :id="`tx1${i}`"></textarea>
+                    <Button :id="`btn1${i}`" v-on:click="sendPerson1(i)">Send</Button>
+                </div>
+                
+                <div class="slide">
+                    number of message bars
+                    <select name="slide1" id="1" @change="changeKeyboards1( $event )" >
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                    </select>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="chat-box" id="box2">
+                <div class="chatlogs">
+                    <div v-for="message in messages" class="chat" :class="{self:message.speaker , friend: !message.speaker}">
+                        
+                        <div class="user-photo"> 
+                            <img v-if="message.speaker" src="img/friend.png" alt="failed"> 
+                            <img v-else src="img/me.png" alt="failed"> 
+                        </div>
+                        <div class="chat-message"> {{ message.val }} </div>
+                    </div>
+                </div>
+    
+                <div v-for="i in numOfKeyboard2" class="chat-form">
+                    <textarea :id="`tx2${i}`"></textarea>
+                    <Button :id="`btn2${i}`" v-on:click="sendPerson2(i)">Send</Button>
+                </div>
+
+                <div class="slide">
+                    number of message bars
+                    <select name="slide2" id="2" @change="changeKeyboards2( $event )" >
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                    </select>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="main.js"></script>
+</body>
+</html>
