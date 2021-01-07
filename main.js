@@ -2,8 +2,8 @@ var app = new Vue({
     el: "#app",
     data: {
         messages: [
-            {val: "what's app bro" , speaker: true} , 
-            {val: "what's app bro" , speaker: false} ,
+            {val: "what's up bro" , speaker: true} , 
+            {val: "what's up bro" , speaker: false} ,
         ],
         numOfKeyboard1: 1 ,
         numOfKeyboard2: 1 ,        
